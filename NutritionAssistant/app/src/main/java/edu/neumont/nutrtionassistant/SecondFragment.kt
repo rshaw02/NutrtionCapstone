@@ -6,6 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.LinearLayout
+import android.widget.ScrollView
+import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 
 /**
@@ -13,12 +16,22 @@ import androidx.navigation.fragment.findNavController
  */
 class SecondFragment : Fragment() {
 
+    lateinit var scroll_items: LinearLayout
+
     override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_second, container, false)
+        val root = inflater.inflate(R.layout.fragment_second, container, false)
+        scroll_items = root.findViewById(R.id.scroll_items)
+        for (i in 1..10) {
+            val text = TextView(activity)
+            text.textSize = 40f
+            text.text = getString(R.string.test, i)
+            scroll_items.addView(text, 1000, 150)
+        }
+        return root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

@@ -6,6 +6,9 @@ import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.ListView
+import android.widget.ScrollView
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,6 +21,7 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
