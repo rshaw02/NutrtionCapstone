@@ -9,7 +9,10 @@ import android.view.MenuItem
 import android.widget.ListView
 import android.widget.ScrollView
 import android.widget.TextView
+import androidx.room.Room
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,4 +42,5 @@ class MainActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
 }
