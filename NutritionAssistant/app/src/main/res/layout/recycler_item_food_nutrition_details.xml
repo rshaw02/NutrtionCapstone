@@ -4,34 +4,41 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="food"
+            type="edu.neumont.nutrtionassistant.data.NutritionFood" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".SecondFragment">
+        android:layout_height="wrap_content">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/scroll_view"
+        <TextView
+            android:id="@+id/food_name"
             android:layout_width="match_parent"
-            android:layout_height="300sp"
+            android:layout_height="22dp"
+            android:gravity="center_horizontal"
+            android:text="@{food.name}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.417" />
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="Tomato" />
 
-        <Button
-            android:id="@+id/button_second"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/previous"
+        <TextView
+            android:id="@+id/food_calories"
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:gravity="center_horizontal"
+            android:text="@{Integer.toString(food.calories)}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/scroll_view"
-            app:layout_constraintVertical_bias="0.921" />
+            app:layout_constraintTop_toBottomOf="@+id/food_name"
+            tools:text="1000" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>

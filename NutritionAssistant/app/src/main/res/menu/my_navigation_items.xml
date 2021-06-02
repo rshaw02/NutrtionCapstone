@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/NutritionCalendarFragment"
+        android:icon="@drawable/ic_purple_calendar"
+        android:title="@string/calendar" />
+    <item android:id="@+id/userFoodsFragment"
+        android:icon="@drawable/ic_purple_fastfood"
+        android:title="@string/my_foods" />
+</menu>

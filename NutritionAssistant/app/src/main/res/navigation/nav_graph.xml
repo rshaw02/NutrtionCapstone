@@ -3,26 +3,56 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/NutritionCalendarFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="edu.neumont.nutrtionassistant.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-
+        android:id="@+id/NutritionCalendarFragment"
+        android:name="edu.neumont.nutrtionassistant.NutritionCalendarFragment"
+        android:label="@string/nutrition_calendar_label"
+        tools:layout="@layout/fragment_nutrtion_calendar">
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_NutritionCalendarFragment_to_userFoodsFragment"
+            app:destination="@id/userFoodsFragment" />
+        <action
+            android:id="@+id/action_NutritionCalendarFragment_to_addNutritionFoodFragment"
+            app:destination="@id/addNutritionFoodFragment" />
+        <action
+            android:id="@+id/action_NutritionCalendarFragment_to_nutritionDetailsFragment"
+            app:destination="@id/nutritionDetailsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="edu.neumont.nutrtionassistant.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
+        android:id="@+id/addFoodFragment"
+        android:name="edu.neumont.nutrtionassistant.AddFoodFragment"
+        android:label="AddFoodFragment"
+        tools:layout="@layout/fragment_add_food">
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_addFoodFragment_to_userFoodsFragment"
+            app:destination="@id/userFoodsFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/userFoodsFragment"
+        android:name="edu.neumont.nutrtionassistant.UserFoodsFragment"
+        android:label="UserFoodsFragment"
+        tools:layout="@layout/fragment_user_foods">
+        <action
+            android:id="@+id/action_userFoodsFragment_to_NutritionCalendarFragment"
+            app:destination="@id/NutritionCalendarFragment" />
+        <action
+            android:id="@+id/action_userFoodsFragment_to_addFoodFragment"
+            app:destination="@id/addFoodFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNutritionFoodFragment"
+        android:name="edu.neumont.nutrtionassistant.AddNutritionFoodFragment"
+        android:label="AddNutritionFoodFragment"
+        tools:layout="@layout/fragment_add_nutrition_food" >
+        <action
+            android:id="@+id/action_addNutritionFoodFragment_to_NutritionCalendarFragment"
+            app:destination="@id/NutritionCalendarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nutritionDetailsFragment"
+        android:name="edu.neumont.nutrtionassistant.NutritionDetailsFragment"
+        android:label="NutritionDetailsFragment"
+        tools:layout="@layout/fragment_nutrition_details" />
 </navigation>

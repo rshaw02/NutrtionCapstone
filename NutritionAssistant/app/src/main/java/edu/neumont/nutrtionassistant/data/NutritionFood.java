@@ -4,7 +4,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity
-public class Food {
+public class NutritionFood {
 
     @PrimaryKey(autoGenerate = true)
     public int id;
@@ -13,13 +13,16 @@ public class Food {
 
     public int calories;
 
-//    @ColumnInfo(typeAffinity = ColumnInfo.BLOB)
-//    public byte[] image;
+    /**
+     * Stored in the format yyyy-mm-dd
+     */
+    public String date;
 
-    public Food(String name, int calories/*, byte[] image*/) {
+    public NutritionFood(String name, int calories, String date) {
         this.name = name;
         this.calories = calories;
-//        this.image = image;
+        this.date = date;
     }
 
 }
+

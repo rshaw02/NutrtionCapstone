@@ -15,12 +15,12 @@
 
         <TextView
             android:id="@+id/food_name"
-            android:layout_width="match_parent"
+            android:layout_width="349dp"
             android:layout_height="22dp"
             android:gravity="center_horizontal"
             android:text="@{food.name}"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/checkBox"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -29,15 +29,26 @@
 
         <TextView
             android:id="@+id/food_calories"
-            android:layout_width="match_parent"
+            android:layout_width="349dp"
             android:layout_height="22dp"
             android:gravity="center_horizontal"
             android:text="@{Integer.toString(food.calories)}"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/checkBox"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/food_name"
+            app:layout_constraintVertical_bias="0.0"
             tools:text="1000" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="61dp"
+            android:layout_height="44dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

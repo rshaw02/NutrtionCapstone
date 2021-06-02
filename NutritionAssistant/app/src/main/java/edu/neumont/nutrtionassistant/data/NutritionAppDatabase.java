@@ -6,10 +6,11 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-@Database(entities = {Food.class}, version = 1)
+@Database(entities = {Food.class, NutritionFood.class}, version = 1)
 public abstract class NutritionAppDatabase extends RoomDatabase {
 
     public abstract FoodDao foodDao();
+    public abstract NutritionFoodDao nutritionFoodDao();
 
     private static volatile NutritionAppDatabase INSTANCE;
 
